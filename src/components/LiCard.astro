@@ -1,0 +1,16 @@
+---
+const { title } = Astro.props;
+---
+
+<li class="py-4 shadow-black text-blue-950 transition mx-10">
+    <span class="relative 
+    after:content-['']
+    after:absolute
+    after:w-0
+    after:h-0.5
+    after:bg-blue-950
+    after:bottom-0
+    after:left-0 after:transition-all
+    after:duration-300
+    hover:after:w-full">{title}</span>
+</li>

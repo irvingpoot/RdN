@@ -1,11 +1,42 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
+import LiCard from '../components/LiCard.astro';
+import Neurona from '../components/Neurona.astro';
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<Welcome />
+	<main>
+		<div class="text-center py-40 border">
+			<p class="text-5xl">Bienvenido a:</p>
+			<h1 class=" text-8xl font-semibold text-shadow-black text-shadow-xs">Redes de Neurociencias</h1>
+		</div>
+		<!-- Sección Lineas de trabajo -->
+		<h1 class="text-center text-4xl font-semibold pt-10 pb-5">Nuestras líneas de trabajo</h1>
+		<ul class="grid grid-cols-2 md:grid-cols-3 gap-4 text-2xl text-center pb-10">
+			<LiCard title="Investigación (Difusión / Divulgación)" />
+			<LiCard title="Formación académica" />
+			<LiCard title="Servicios de atención clínica" />
+			<LiCard title="Vinculación (Triple hélice)" />
+			<LiCard title="Transferencia Tecnológica (TT)" />
+			<LiCard title="Transferencia de Conocimiento (TC)" />
+		</ul>
+
+		<!-- Sección Neurociencias -->
+		<h1 class="text-center text-4xl font-semibold pt-10 pb-5">Nuestra Red de Disciplinas</h1>
+		<div class="flex flex-wrap gap-5 py-10 justify-center items-center">
+			<Neurona title="Matematicas"/>
+			<Neurona title="Neurología"/>
+			<Neurona title="Rehabilitación"/>
+			<Neurona title="Neuroimagen"/>
+			<Neurona title="Genética"/>
+			<Neurona title="Psicología"/>
+			<Neurona title="Bioquímica"/>
+			<Neurona title="Ingeniería biomédica"/>
+			<Neurona title="Paido-psiquiatría"/>
+			<Neurona title="Neuro-pediatría"/>
+		</div>
+	</main>
 </Layout>

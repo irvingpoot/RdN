@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: 'PlayfairDisplay';
+    src: url('../assets/PlayfairDisplay.woff2') format('woff2');
+    font-style: normal;
+    font-weight: 100 700;
+    font-display: swap;
+}
+
+@theme {
+    --font-PlayfairDisplay: 'PlayfairDisplay', system-ui, sans-serif;
+}
