@@ -2,6 +2,9 @@
 import '../styles/global.css'
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import { ClientRouter } from 'astro:transitions';
+
+const { title } = Astro.props;
 ---
 
 <!doctype html>
@@ -10,10 +13,10 @@ import Footer from '../components/Footer.astro';
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>{title}</title>
+		<ClientRouter />
 	</head>
-	<body class="font-PlayfairDisplay text-blue-950 bg-gray-50">
+	<body class="font-PlayfairDisplay text-blue-950 bg-gray-50 m-0 p-0">
 		<Header />
 		<slot />
 		<Footer />

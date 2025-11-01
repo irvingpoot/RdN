@@ -5,46 +5,46 @@ import TextCard from "../components/TextCard.astro"
 import LiCard from "../components/LiCard.astro"
 ---
 
-<Layout>
+<Layout title="RdN: Sobre Nosotros">
     <main>
         <!-- Sección ¿Quienes somos? -->
-        <div class="py-20">
-            <h1 class="text-center text-8xl font-semibold pb-5">¿Quienes somos?</h1>
-            <p class="text-center text-xl py-10 w-3/5 mx-auto">
+        <div class="py-20 bg-[url(/misionvision.webp)] bg-cover bg-blue-950 bg-blend-soft-light text-gray-50">
+            <h1 class="text-center text-8xl font-semibold pb-5 animate-pulse-fade-in">¿Quienes somos?</h1>
+            <p class="text-center text-xl py-10 w-3/5 mx-auto animate-pulse-fade-in">
                 Somos un grupo interdisciplinario de neurociencias dedicado a impulsar la excelencia, la práctica ética y la especialización en el estudio del sistema nervioso y la conducta. 
                 Nos enfocamos en el análisis riguroso de la viabilidad para generar conocimiento basado en la evidencia científica, colaborando activamente con la sociedad para proponer soluciones a problemas de salud.
             </p>
 
             <div class="flex gap-30 py-10 justify-center">
-                <Card title="Misión" description="Contribuir de forma interdisciplinaria en la formación académica, investigación, divulgación científicas y buenas prácticas clínicas, en el campo de las neurociencias; a fin de favorecer el ejercicio de la profesión con altos estándares de calidad, innovación y especialización, en un ambiente incluyente y ético."/>
-                <Card title="Visión" description="Constituirnos como líderes en el país en la formación, práctica e investigación para el desarrollo de las neurociencias."/>
+                <Card class="animate-fade-in-right" title="Misión" description="Contribuir de forma interdisciplinaria en la formación académica, investigación, divulgación científicas y buenas prácticas clínicas, en el campo de las neurociencias; a fin de favorecer el ejercicio de la profesión con altos estándares de calidad, innovación y especialización, en un ambiente incluyente y ético."/>
+                <Card class="animate-fade-in-left" title="Visión" description="Constituirnos como líderes en el país en la formación, práctica e investigación para el desarrollo de las neurociencias."/>
             </div>
         </div>
 
         <!-- Sección Objetivos -->
         <div class="py-20">
-            <h1 class="text-center text-5xl font-semibold pb-5">¿Cuáles son nuestros objetivos?</h1>
+            <h1 class="text-center text-5xl font-semibold pb-5 timeline-view animate-range-[entry_20%_cover_40%] animate-zoom-in">¿Cuáles son nuestros objetivos?</h1>
             <div class="flex gap-30 py-10 justify-center">
-                <TextCard description="Favorecer el desarrollo y profesionalización de las Neurociencias en el marco de la evidencia científica."/>
-                <TextCard description="Colaborar con la sociedad en el análisis y propuestas, para la atención de problemas de salud desde el enfoque de las neurociencias y la conducta, preservando un alto nivel profesional y ético."/>
+                <TextCard class="animate-fade-in-right timeline-view animate-range-[entry_20%_cover_40%]" description="Favorecer el desarrollo y profesionalización de las Neurociencias en el marco de la evidencia científica."/>
+                <TextCard class="animate-fade-in-left timeline-view animate-range-[entry_20%_cover_40%]" description="Colaborar con la sociedad en el análisis y propuestas, para la atención de problemas de salud desde el enfoque de las neurociencias y la conducta, preservando un alto nivel profesional y ético."/>
             </div>
         </div>
 
         <!-- Sección Nuestros valores -->
         <div class="py-20 flex items-center justify-center px-30">
-            <div class="flex grow w-1/3 justify-center items-center">
+            <div class="flex grow w-1/3 justify-center items-center animate-fade-in-right timeline-view animate-range-[entry_20%_cover_40%]">
                 <img src="/valores.webp" alt="Nuestros valores" class="justify-center items-center rounded-xl shadow-2xl"/>
             </div>
-            <div class="flex grow flex-col pl-10">
+            <div class="flex grow flex-col pl-10 animate-fade-in-left timeline-view animate-range-[entry_20%_cover_40%]">
                 <h1 class="text-6xl font-semibold pb-5">Nuestros valores</h1>
                 <ul class="text-2xl list-disc list-inside flex flex-col gap-3">
-                    <LiCard title="Respeto a la vida humana"/>
-                    <LiCard title="Profesionalismo"/>
-                    <LiCard title="Trabajo interdisciplinario"/>
-                    <LiCard title="Empatía"/>
-                    <LiCard title="Compromiso (Salud, Social)"/>
-                    <LiCard title="Calidad"/>
-                    <LiCard title="Calidez"/>
+                    <LiCard class="hover:animate-slide-out-right hover:animate-duration-150" title="Respeto a la vida humana"/>
+                    <LiCard class="hover:animate-slide-out-right hover:animate-duration-150" title="Profesionalismo"/>
+                    <LiCard class="hover:animate-slide-out-right hover:animate-duration-150" title="Trabajo interdisciplinario"/>
+                    <LiCard class="hover:animate-slide-out-right hover:animate-duration-150" title="Empatía"/>
+                    <LiCard class="hover:animate-slide-out-right hover:animate-duration-150" title="Compromiso (Salud, Social)"/>
+                    <LiCard class="hover:animate-slide-out-right hover:animate-duration-150" title="Calidad"/>
+                    <LiCard class="hover:animate-slide-out-right hover:animate-duration-150" title="Calidez"/>
                 </ul>
             </div>
         </div>
