@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@plugin "@midudev/tailwind-animations";
+
 
 @font-face {
     font-family: 'PlayfairDisplay';

@@ -9,13 +9,13 @@ import Neurona from '../components/Neurona.astro';
 
 <Layout>
 	<main>
-		<div class="text-center py-40 border">
-			<p class="text-5xl">Bienvenido a:</p>
-			<h1 class=" text-8xl font-semibold text-shadow-black text-shadow-xs">Redes de Neurociencias</h1>
+		<div class="flex flex-col gap-5 text-center py-40 border">
+			<p class="text-5xl animate-fade-in-up">Bienvenido a:</p>
+			<h1 class=" text-8xl font-semibold text-shadow-black text-shadow-xs animate-fade-in-down">Redes de Neurociencias</h1>
 		</div>
 		<!-- Sección Lineas de trabajo -->
-		<h1 class="text-center text-4xl font-semibold pt-10 pb-5">Nuestras líneas de trabajo</h1>
-		<ul class="grid grid-cols-2 md:grid-cols-3 gap-4 text-2xl text-center pb-10">
+		<h1 class="text-center text-4xl font-semibold pt-10 pb-10 animate-fade-in">Nuestras líneas de trabajo</h1>
+		<ul class="grid grid-cols-2 md:grid-cols-3 gap-5 text-2xl text-center pb-10 animate-fade-in">
 			<LiCard title="Investigación (Difusión / Divulgación)" />
 			<LiCard title="Formación académica" />
 			<LiCard title="Servicios de atención clínica" />
@@ -25,8 +25,8 @@ import Neurona from '../components/Neurona.astro';
 		</ul>
 
 		<!-- Sección Neurociencias -->
-		<h1 class="text-center text-4xl font-semibold pt-10 pb-5">Nuestra Red de Disciplinas</h1>
-		<div class="flex flex-wrap gap-5 py-10 justify-center items-center">
+		<h1 class="text-center text-4xl font-semibold pt-10 pb-5 animate-zoom-in timeline-view animate-range-[entry_20%_cover_25%]">Nuestra Red de Disciplinas</h1>
+		<div class="flex flex-wrap gap-15 py-10 px-50 justify-center items-center">
 			<Neurona title="Matematicas"/>
 			<Neurona title="Neurología"/>
 			<Neurona title="Rehabilitación"/>
