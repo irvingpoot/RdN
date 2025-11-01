@@ -18,7 +18,7 @@ Este proyecto está construido con tecnologías modernas, enfocadas en el rendim
 Para ejecutar este proyecto localmente, sigue estos pasos:
 Clonar el repositorio:
 ```bash
-git clone <URL_DEL_REPOSITORIO>
+git clone https://github.com/irvingpoot/RdN
 cd rdn
 ```
 
