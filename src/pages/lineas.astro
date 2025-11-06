@@ -1,0 +1,16 @@
+---
+import Layout from "../layouts/Layout.astro"
+import LiCard from '../components/LiCard.astro';
+---
+
+<Layout title="RdN: Líneas de trabajo">
+    <h1 class="text-center text-8xl font-semibold py-20 animate-fade-in-down">Nuestras lineas de trabajo</h1>
+    <ul class="grid grid-cols-2 md:grid-cols-3 gap-5 text-2xl text-center pb-10 animate-fade-in">
+			<LiCard title="Investigación (Difusión / Divulgación)" />
+			<LiCard title="Formación académica" />
+			<LiCard title="Servicios de atención clínica" />
+			<LiCard title="Vinculación (Triple hélice)" />
+			<LiCard title="Transferencia Tecnológica (TT)" />
+			<LiCard title="Transferencia de Conocimiento (TC)" />
+		</ul>
+</Layout>
