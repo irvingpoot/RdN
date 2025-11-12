@@ -1,6 +1,5 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import LiCard from '../components/LiCard.astro';
 import Neurona from '../components/Neurona.astro';
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
@@ -10,23 +9,15 @@ import Neurona from '../components/Neurona.astro';
 <Layout title="RdN">
 	<main>
 		<div class="flex flex-col gap-5 text-gray-50 text-center py-40 bg-[url(/banner.webp)] bg-cover bg-blue-950 bg-blend-soft-light">
-			<p class="text-5xl animate-fade-in-up">Bienvenido a:</p>
-			<h1 class=" text-8xl font-semibold text-shadow-black text-shadow-xs animate-fade-in-down">Redes de Neurociencias</h1>
+			<p class="max-sm:text-2xl text-5xl animate-fade-in-up">Bienvenido a:</p>
+			<h1 class="max-sm:text-5xl text-8xl font-semibold text-shadow-black text-shadow-xs animate-fade-in-down">Redes de Neurociencias</h1>
 		</div>
 		<!-- Sección Lineas de trabajo -->
-		<h1 class="text-center text-4xl font-semibold pt-10 pb-10 animate-fade-in">Nuestras líneas de trabajo</h1>
-		<ul class="grid grid-cols-2 md:grid-cols-3 gap-5 text-2xl text-center pb-10 animate-fade-in">
-			<LiCard title="Investigación (Difusión / Divulgación)" />
-			<LiCard title="Formación académica" />
-			<LiCard title="Servicios de atención clínica" />
-			<LiCard title="Vinculación (Triple hélice)" />
-			<LiCard title="Transferencia Tecnológica (TT)" />
-			<LiCard title="Transferencia de Conocimiento (TC)" />
-		</ul>
+		<h1 class="text-center text-4xl font-semibold pt-10 pb-10 animate-fade-in">Próximos eventos</h1>
 
 		<!-- Sección Neurociencias -->
 		<h1 class="text-center text-4xl font-semibold pt-10 pb-5 animate-zoom-in timeline-view animate-range-[entry_20%_cover_25%]">Nuestra Red de Disciplinas</h1>
-		<div class="flex flex-wrap gap-15 py-10 px-50 justify-center items-center">
+		<div class="flex flex-wrap gap-15 py-10 px-15 max-sm:gap-5 max-sm:px-1 justify-center items-center">
 			<Neurona title="Matematicas"/>
 			<Neurona title="Neurología"/>
 			<Neurona title="Rehabilitación"/>

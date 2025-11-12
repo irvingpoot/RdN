@@ -1,8 +1,8 @@
 ---
 const { title, description, class: extraClasses } = Astro.props;
 ---
-<div class:list={["flex flex-col gap-5 grow text-center max-w-xl p-10 text-gray-200 bg-blue-950 rounded-4xl shadow-2xl shadow-black", extraClasses]}>
-    <h1 class="font-semibold text-4xl">{title}</h1>
+<div class:list={["flex flex-col gap-5 grow text-center max-w-xl p-10 text-gray-200 bg-blue-950 rounded-4xl shadow-2xl shadow-black max-sm:max-w-xs max-sm:gap-1", extraClasses]}>
+    <h1 class="font-semibold text-4xl max-sm:text-2xl">{title}</h1>
     <hr class="border-white my-2">
-    <p class="text-xl text-justify w-full">{description}</p>
+    <p class="text-xl text-justify w-full max-sm:text-xs">{description}</p>
 </div>

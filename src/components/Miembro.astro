@@ -1,9 +1,9 @@
 ---
     const { nombre, imagen, bio, class: extraClasses } = Astro.props;
 ---
-<div class:list={["flex gap-5", extraClasses]}>
+<div class:list={["lg:flex lg:gap-5",extraClasses]}>
     <aside>
-        <img src={imagen} alt={nombre} class="w-6xl">
+        <img src={imagen} alt={nombre} class="max-sm:float-left max-sm:w-48 max-sm:mr-4 max-sm:mb-2 lg:w-7xl rounded-lg">
     </aside>
     <div class="max-w-fit">
         <h1 class="text-2xl font-semibold pb-2">{nombre}</h1>

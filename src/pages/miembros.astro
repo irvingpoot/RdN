@@ -5,8 +5,8 @@ import MembresiaCard from "../components/MembresiaCard.astro"
 ---
 
 <Layout title="RdN: Miembros">
-    <h1 class="text-center text-8xl font-semibold py-20 animate-fade-in-down">Miembros de Red de Neurociencias</h1>
-    <h1 class="text-center text-6xl font-semibold py-10 animate-fade-in-up">Membresías</h1>
+    <h1 class="text-center text-8xl font-semibold py-20 animate-fade-in-down max-sm:text-5xl max-sm:px-5 max-lg:text-7xl max-lg:pb-10">Miembros de Red de Neurociencias</h1>
+    <h1 class="text-center text-6xl font-semibold py-10 animate-fade-in-up max-sm:text-4xl max-lg:text-5xl">Membresías</h1>
     <div class="flex flex-wrap justify-center items-center gap-10">
         <MembresiaCard 
             class="animate-fade-in-up animate-delay-300"
@@ -29,12 +29,12 @@ import MembresiaCard from "../components/MembresiaCard.astro"
             descripcion="Profesionista que solo puede votar."
         />
         <MembresiaCard 
-            class="animate-fade-in-up animate-delay-700"
+            class="animate-fade-in-up animate-delay-300"
             titulo="En formación"
             descripcion="Son estudiantes en formación que no votan ni pueden ser elegidos."
         />
         <MembresiaCard 
-            class="animate-fade-in-up animate-delay-700"
+            class="animate-fade-in-up animate-delay-300"
             titulo="Internacional"
             descripcion="Residentes permanentes en el extranjero que cumplen los requisitos."
         />
@@ -42,7 +42,7 @@ import MembresiaCard from "../components/MembresiaCard.astro"
 
     <h1 class="text-center text-6xl font-semibold pt-20 animate-zoom-in timeline-view animate-range-[entry_20%_cover_60%]">Miembros activos de RdN</h1>
     <h1 class="text-center text-5xl font-semibold py-10 animate-zoom-in timeline-view animate-range-[entry_20%_cover_60%]">Neurología</h1>
-    <div class="flex justify-center items-center gap-15 px-20">
+    <div class="flex justify-center items-center gap-15 px-20 max-sm:flex-col max-sm:px-5">
         <Miembro 
             class="animate-fade-in-right timeline-view animate-range-[entry_20%_cover_40%]"
             nombre="Dr. Jorge Efraín Salazar Ceballos"
@@ -58,7 +58,7 @@ import MembresiaCard from "../components/MembresiaCard.astro"
     </div>
 
     <h1 class="text-center text-5xl font-semibold py-10 animate-zoom-in timeline-view animate-range-[entry_20%_cover_60%]">Neuro-pediatría</h1>
-    <div class="flex justify-center items-center gap-15 px-20">
+    <div class="flex justify-center items-center gap-15 px-20 max-sm:flex-col max-sm:px-5">
         <Miembro 
             class="animate-fade-in-right timeline-view animate-range-[entry_20%_cover_40%]"
             nombre="Dr. Jorge Efraín Salazar Ceballos"
@@ -74,7 +74,7 @@ import MembresiaCard from "../components/MembresiaCard.astro"
     </div>
 
     <h1 class="text-center text-5xl font-semibold py-10 animate-zoom-in timeline-view animate-range-[entry_20%_cover_60%]">Psiquiatría</h1>
-    <div class="flex justify-center items-center gap-15 px-20">
+    <div class="flex justify-center items-center gap-15 px-20 max-sm:flex-col max-sm:px-5">
         <Miembro 
             class="animate-fade-in-right timeline-view animate-range-[entry_20%_cover_40%]"
             nombre="Dr. Jorge Efraín Salazar Ceballos"
@@ -90,7 +90,7 @@ import MembresiaCard from "../components/MembresiaCard.astro"
     </div>
 
     <h1 class="text-center text-5xl font-semibold py-10 animate-zoom-in timeline-view animate-range-[entry_20%_cover_60%]">Paido-psiquiatría</h1>
-    <div class="flex justify-center items-center gap-15 px-20">
+    <div class="flex justify-center items-center gap-15 px-20 max-sm:flex-col max-sm:px-5">
         <Miembro 
             class="animate-fade-in-right timeline-view animate-range-[entry_20%_cover_40%]"
             nombre="Dr. Jorge Efraín Salazar Ceballos"
@@ -106,7 +106,7 @@ import MembresiaCard from "../components/MembresiaCard.astro"
     </div>
 
     <h1 class="text-center text-5xl font-semibold py-10 animate-zoom-in timeline-view animate-range-[entry_20%_cover_60%]">Ingeniería Biomédica</h1>
-    <div class="flex justify-center items-center gap-15 px-20">
+    <div class="flex justify-center items-center gap-15 px-20 max-sm:flex-col max-sm:px-5">
         <Miembro 
             class="animate-fade-in-right timeline-view animate-range-[entry_20%_cover_40%]"
             nombre="Dr. Jorge Efraín Salazar Ceballos"
@@ -122,7 +122,7 @@ import MembresiaCard from "../components/MembresiaCard.astro"
     </div>
 
     <h1 class="text-center text-5xl font-semibold py-10 animate-zoom-in timeline-view animate-range-[entry_20%_cover_60%]">Neuropsicología</h1>
-    <div class="flex justify-center items-center gap-15 px-20">
+    <div class="flex justify-center items-center gap-15 px-20 max-sm:flex-col max-sm:px-5">
         <Miembro 
             class="animate-fade-in-right timeline-view animate-range-[entry_20%_cover_40%]"
             nombre="Dr. Jorge Efraín Salazar Ceballos"
@@ -138,7 +138,7 @@ import MembresiaCard from "../components/MembresiaCard.astro"
     </div>
 
     <h1 class="text-center text-5xl font-semibold py-10 animate-zoom-in timeline-view animate-range-[entry_20%_cover_60%]">Neurociencias de la conducta</h1>
-    <div class="flex justify-center items-center gap-15 px-20 pb-10">
+    <div class="flex justify-center items-center gap-15 px-20 pb-10 max-sm:flex-col max-sm:px-5">
         <Miembro 
             class="animate-fade-in-right timeline-view animate-range-[entry_20%_cover_40%]"
             nombre="Dr. Jorge Efraín Salazar Ceballos"

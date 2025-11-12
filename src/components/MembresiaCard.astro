@@ -2,7 +2,7 @@
     const { titulo, descripcion, class: extraClasses} = Astro.props;
 ---
 
-<div class:list={["border-2 relative border-blue-950 rounded-xl max-w-sm min-h-50 p-5", extraClasses]}>
+<div class:list={["border-2 relative border-blue-950 rounded-xl max-w-sm min-h-50 p-5 max-sm:max-w-2xs max-lg:max-w-xs", extraClasses]}>
     <p class="text-xl min-h-50">{descripcion}</p>    
     <img class="absolute w-24 h-24 -right-5 -bottom-5" src="/logoMiembro.webp" alt="logo">
     <h1 class="absolute text-gray-50 text-2xl font-semibold bottom-5 bg-blue-950 p-3 rounded-xl">{titulo}</h1>

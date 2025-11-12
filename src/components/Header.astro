@@ -1,9 +1,40 @@
-<header class="flex justify-between m-5" transition:name="trans-menu">
-    <img src="" alt="Logo RdN">
+<header class="relative flex justify-between items-center px-5 py-4 bg-white shadow-md z-2" transition:name="trans-menu">
+    
+    <a href="/"> <img src="valores.webp" alt="Logo RdN" class="h-10"> </a>
 
-    <nav class="flex gap-5 pr-10 text-xl font-semibold">
-        <a class="hover:bg-blue-950 hover:text-gray-50 hover:rounded-3xl hover:animate-pop py-3 px-4 text-center" href="/">Inicio</a>
-        <a class="hover:bg-blue-950 hover:text-gray-50 hover:rounded-3xl hover:animate-pop py-3 px-4 text-center" href="nosotros">Sobre nosotros</a>
-        <a class="hover:bg-blue-950 hover:text-gray-50 hover:rounded-3xl hover:animate-pop py-3 px-4 text-center" href="miembros">Miembros</a>
+    <button id="menu-btn" class="md:hidden z-60"> 
+        <svg id="icon-open" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+        <svg id="icon-close" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" class="w-8 h-8 hidden">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+    </button>
+
+    <nav id="mobile-menu" class="hidden flex flex-col absolute top-0 left-0 w-full h-screen bg-blue-950 z-2 justify-center items-center animate-fade-in gap-8 md:flex md:flex-row md:static md:w-auto md:h-auto md:bg-transparent md:gap-3 md:pr-3 text-xl font-semibold">
+        <h1 class="max-sm:text-2xl max-sm:text-gray-50 md:hidden">Redes de Neurociencias</h1>
+        <a class="hover:bg-gray-50 md:hover:bg-blue-950 md:hover:text-gray-50 hover:text-blue-950 hover:rounded-3xl hover:animate-pop max-sm:text-gray-50 py-3 px-4 text-center" href="/">Inicio</a>
+        <a class="hover:bg-gray-50 md:hover:bg-blue-950 md:hover:text-gray-50 hover:text-blue-950 hover:rounded-3xl hover:animate-pop max-sm:text-gray-50 py-3 px-4 text-center" href="nosotros">Sobre nosotros</a>
+        <a class="hover:bg-gray-50 md:hover:bg-blue-950 md:hover:text-gray-50 hover:text-blue-950 hover:rounded-3xl hover:animate-pop max-sm:text-gray-50 py-3 px-4 text-center" href="lineas">Líneas de trabajo</a>
+        <a class="hover:bg-gray-50 md:hover:bg-blue-950 md:hover:text-gray-50 hover:text-blue-950 hover:rounded-3xl hover:animate-pop max-sm:text-gray-50 py-3 px-4 text-center" href="miembros">Miembros</a>
+        <a class="hover:bg-gray-50 md:hover:bg-blue-950 md:hover:text-gray-50 hover:text-blue-950 hover:rounded-3xl hover:animate-pop max-sm:text-gray-50 py-3 px-4 text-center" href="redes">Redes</a>
     </nav>
 </header>
+
+<script>
+    // Seleccionamos los elementos del DOM
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const iconOpen = document.getElementById('icon-open');
+    const iconClose = document.getElementById('icon-close');
+
+    // Añadimos el 'listener' al botón
+    menuBtn.addEventListener('click', () => {
+        // Alternamos la clase 'hidden' en el menú
+        mobileMenu.classList.toggle('hidden');
+        
+        // Alternamos la clase 'hidden' en los iconos
+        iconOpen.classList.toggle('hidden');
+        iconClose.classList.toggle('hidden');
+    });
+</script>

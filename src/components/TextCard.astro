@@ -2,7 +2,7 @@
 const { description, class: extraClasses } = Astro.props;
 ---
 
-<div class:list={["flex flex-col gap-5 grow justify-center text-center max-w-xl p-10 text-gray-200 bg-blue-950 rounded-4xl shadow-2xl shadow-black", extraClasses]}>
+<div class:list={["flex flex-col gap-5 grow justify-center text-center max-w-xl p-10 text-gray-200 bg-blue-950 rounded-4xl shadow-2xl shadow-black max-sm:max-w-xs", extraClasses]}>
     <p class="text-xl text-justify w-full">{description}</p>
 	<hr class="border-white my-2">
 </div>
