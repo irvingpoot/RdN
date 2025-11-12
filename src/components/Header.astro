@@ -20,21 +20,3 @@
         <a class="hover:bg-gray-50 md:hover:bg-blue-950 md:hover:text-gray-50 hover:text-blue-950 hover:rounded-3xl hover:animate-pop max-sm:text-gray-50 py-3 px-4 text-center" href="redes">Redes</a>
     </nav>
 </header>
-
-<script>
-    // Seleccionamos los elementos del DOM
-    const menuBtn = document.getElementById('menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const iconOpen = document.getElementById('icon-open');
-    const iconClose = document.getElementById('icon-close');
-
-    // Añadimos el 'listener' al botón
-    menuBtn.addEventListener('click', () => {
-        // Alternamos la clase 'hidden' en el menú
-        mobileMenu.classList.toggle('hidden');
-        
-        // Alternamos la clase 'hidden' en los iconos
-        iconOpen.classList.toggle('hidden');
-        iconClose.classList.toggle('hidden');
-    });
-</script>
