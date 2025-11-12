@@ -1,10 +1,11 @@
 ---
 import Layout from "../layouts/Layout.astro"
 import SocialCard from "../components/SocialCard.astro"
+import HeaderScript from "../components/HeaderScript.astro"
 ---
 
 <Layout title="RdN: Redes">
-    <h1 class="text-center text-8xl font-semibold py-20 animate-fade-in-down">Redes de Neurociencias</h1>
+    <h1 class="text-center text-8xl font-semibold py-20 animate-fade-in-down max-sm:text-5xl">Redes de Neurociencias</h1>
     <p class="text-center text-2xl pb-10 animate-fade-in-up">Puedes encontrarnos en:</p>
 
     <main class="flex flex-wrap gap-10 items-center justify-center p-7">
@@ -15,4 +16,19 @@ import SocialCard from "../components/SocialCard.astro"
         <SocialCard />
     </main>
     
+    <script>
+        // @ts-nocheck
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const iconOpen = document.getElementById('icon-open');
+        const iconClose = document.getElementById('icon-close');
+
+        menuBtn.addEventListener('click', () => {
+            
+            mobileMenu.classList.toggle('hidden');
+            
+            iconOpen.classList.toggle('hidden');
+            iconClose.classList.toggle('hidden');
+        });
+    </script>
 </Layout>
