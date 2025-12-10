@@ -1,0 +1,51 @@
+---
+interface Props {
+    image: string;
+    title: string;
+    author: string;
+    videoCount: number;
+    duration: string;
+    tag?: string;
+    href: string;
+}
+
+const { 
+    image, title, author, videoCount, duration, tag = "General", href 
+} = Astro.props;
+---
+
+<article class="w-full max-w-[340px] bg-white rounded-[2.5rem] p-4 shadow-md hover:shadow-xl transition-shadow duration-300 font-sans border border-slate-100 flex flex-col">
+
+    <div class="relative w-full h-48 mb-4 group overflow-hidden rounded-3xl">
+        <span class="absolute top-4 left-4 bg-indigo-50 px-3 py-1.5 rounded-xl text-xs font-bold text-blue-950 shadow-sm z-10 tracking-wide">
+            {tag}
+        </span>
+        <img src={image} alt={title} class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-in-out"/>
+        <div class="absolute inset-0 bg-indigo-900/10 group-hover:bg-transparent transition-colors duration-300"></div>
+    </div>
+
+    <div class="px-2 pb-2 flex-1 flex flex-col">
+        <div class="flex justify-between items-start mb-2 gap-2">
+            <h3 class="text-lg font-bold text-slate-800 leading-snug line-clamp-2">
+                {title}
+            </h3>
+        </div>
+
+        <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-5 pl-0.5">
+            Dr. {author}
+        </p>
+
+        <div class="flex items-center gap-6 mb-6 text-slate-500 text-sm font-medium pl-0.5 mt-auto">
+            <div class="flex items-center gap-2">
+                <span>{videoCount} Módulos</span>
+            </div>
+            <div class="flex items-center gap-2">
+                <span>{duration}</span>
+            </div>
+        </div>
+
+        <a href={href} class="block text-center w-full py-3 rounded-full border-2 border-blue-950 text-blue-950 font-bold text-sm hover:bg-blue-950 hover:text-white transition-all duration-300 active:scale-95">
+            Ver Temario
+        </a>
+    </div>
+</article>
