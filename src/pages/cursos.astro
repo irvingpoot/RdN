@@ -1,35 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro"
 import CourseCard from "../components/CourseCard.astro"
-const courses = [
-    {
-        image: "https://images.unsplash.com/photo-1620121692029-d088224ddc74?auto=format&fit=crop&w=600&q=80",
-        title: "Fundamentos de Neuroplasticidad Clínica",
-        author: "Elena Villanueva",
-        price: "120 MXN",
-        videoCount: 18,
-        duration: "6 Horas",
-        tag: "Fundamentos"
-    },
-    {
-        image: "https://images.unsplash.com/photo-1559757175-5700dde675bc?auto=format&fit=crop&w=600&q=80",
-        title: "Neuroimagen: Interpretación Básica",
-        author: "Miguel Torres",
-        price: "195 MXN",
-        videoCount: 24,
-        duration: "10 Horas",
-        tag: "Profesional"
-    },
-    {
-        image: "https://images.unsplash.com/photo-1530973428-5bf2db2e4d71?auto=format&fit=crop&w=600&q=80",
-        title: "Bases Neurobiológicas del Aprendizaje",
-        author: "Shirla Santana",
-        price: "90 MXN",
-        videoCount: 12,
-        duration: "4 Horas",
-        tag: "Educación"
-    }
-];
+import { courses } from "../data/courses.js"
 
 ---
 
@@ -44,17 +16,17 @@ const courses = [
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
         
             {courses.map((course) => (
-                <CourseCard 
+            <CourseCard 
+                href={`/curso/${course.id}`} 
                 image={course.image}
                 title={course.title}
                 author={course.author}
                 price={course.price}
-                videoCount={course.videoCount}
+                videoCount={course.totalLessons}
                 duration={course.duration}
-                tag={course.tag}
-                />
+                tag={course.category}
+            />
             ))}
-
         </div>
 
     </section>
