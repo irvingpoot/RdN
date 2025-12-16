@@ -1,0 +1,121 @@
+---
+interface Props {
+    title: string;
+    image: string;
+    date?: Date;
+    time?: string;
+    location?: string;
+}
+
+const { title, image, date, time, location } = Astro.props;
+
+const hasDate = !!date;
+const dayNumber = hasDate ? date.getDate() : "--";
+const monthShort = hasDate 
+    ? date.toLocaleDateString('es-ES', { month: 'short' }).replace('.', '') 
+    : "Próx";
+
+const fullDateString = hasDate 
+    ? date.toLocaleDateString('es-ES', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })
+    : "Fecha por definir";
+
+const displayDate = fullDateString.charAt(0).toUpperCase() + fullDateString.slice(1);
+const displayTime = time || "Hora por definir";
+const displayLocation = location || "Ubicación por confirmar";
+
+// --- Lógica para el Calendario (Google Calendar Link) ---
+let calendarUrl = null;
+
+if (hasDate) {
+    const year = date.getFullYear();
+    const month = String(date.getMonth() + 1).padStart(2, '0');
+    const day = String(date.getDate()).padStart(2, '0');
+    const startDateStr = `${year}${month}${day}`;
+
+    const nextDay = new Date(date);
+    nextDay.setDate(date.getDate() + 1);
+    const nextYear = nextDay.getFullYear();
+    const nextMonth = String(nextDay.getMonth() + 1).padStart(2, '0');
+    const nextDayNum = String(nextDay.getDate()).padStart(2, '0');
+    const endDateStr = `${nextYear}${nextMonth}${nextDayNum}`;
+
+    const details = `Evento: ${title}. Horario: ${time || 'Por confirmar'}. Más info en la web de RDN.`;
+    const locationParam = location || '';
+
+  // 4. URL Final
+    calendarUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(title)}&dates=${startDateStr}/${endDateStr}&details=${encodeURIComponent(details)}&location=${encodeURIComponent(locationParam)}`;
+}
+---
+
+<article class="group relative w-full max-w-xl overflow-hidden rounded-3xl shadow-lg transition-all duration-300 hover:shadow-xl font-sans text-left h-auto min-h-[280px]">
+
+  {/* IMAGEN DE FONDO */}
+    <div class="absolute inset-0 h-full w-full">
+        <img 
+        src={image} 
+        alt={`Imagen del evento: ${title}`} 
+        class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+        />
+        <div class="absolute inset-0 bg-gradient-to-t from-blue-950/90 via-blue-950/40 to-blue-900/10 mix-blend-multiply"></div>
+    </div>
+
+    <div class="relative flex h-full flex-col justify-between p-6">
+    
+        {/* CABECERA */}
+        <div class="flex items-start justify-between">
+        
+        {/* Badge de Fecha */}
+        <div class="flex h-16 w-16 flex-col items-center justify-center rounded-2xl border border-white/20 bg-blue-950 text-white shadow-lg backdrop-blur-md transition-transform group-hover:scale-110">
+            <span class="text-2xl font-bold leading-none tracking-tighter">{dayNumber}</span>
+            <span class="mt-0.5 text-[10px] font-semibold uppercase tracking-wide">{monthShort}</span>
+        </div>
+
+        {/* BOTÓN DE ACCIÓN: Cambia dinámicamente según si hay fecha */}
+        {hasDate && calendarUrl ? (
+            <a 
+            href={calendarUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex items-center gap-1.5 rounded-xl border border-white/10 bg-gray-900/60 px-4 py-2 text-xs font-medium text-white backdrop-blur-md transition-colors hover:bg-blue-600 hover:border-white/30 cursor-pointer"
+            >
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="h-4 w-4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
+            </svg>
+            Agendar
+            </a>
+        ) : (
+            <button disabled class="flex items-center gap-1.5 rounded-xl border border-white/10 bg-blue-950/30 px-4 py-2 text-xs font-medium text-white/70 backdrop-blur-md cursor-not-allowed">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z" />
+            </svg>
+            Próximamente
+            </button>
+        )}
+
+        </div>
+
+        {/* PIE */}
+        <div class="mt-10 transform transition-transform duration-300 group-hover:translate-x-1">
+        <h3 class="mb-2 text-2xl font-bold leading-tight text-white drop-shadow-lg md:text-3xl">
+            {title}
+        </h3>
+        
+        <div class="flex flex-col gap-1.5 text-xs font-medium text-gray-200 md:text-sm">
+            <div class="flex items-center gap-1.5">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-4 w-4 shrink-0 opacity-80">
+                <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zM12.75 6a.75.75 0 00-1.5 0v6c0 .414.336.75.75.75h4.5a.75.75 0 000-1.5h-3.75V6z" clip-rule="evenodd" />
+            </svg>
+            <span class="truncate">{displayDate} • {displayTime}</span>
+            </div>
+
+            <div class="flex items-center gap-1.5">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-4 w-4 shrink-0 opacity-80">
+                <path fill-rule="evenodd" d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd" />
+            </svg>
+            <span>{displayLocation}</span>
+            </div>
+        </div>
+        </div>
+
+    </div>
+</article>

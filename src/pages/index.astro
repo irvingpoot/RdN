@@ -1,9 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Neurona from '../components/Neurona.astro';
+import EventCard from '../components/EventCard.astro';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout title="RdN">
@@ -12,8 +11,19 @@ import Neurona from '../components/Neurona.astro';
 			<p class="max-sm:text-2xl text-5xl animate-fade-in-up">Bienvenido a:</p>
 			<h1 class="max-sm:text-5xl text-8xl font-semibold text-shadow-black text-shadow-xs animate-fade-in-down">Redes de Neurociencias</h1>
 		</div>
-		<!-- Sección Lineas de trabajo -->
-		<h1 class="text-center text-4xl font-semibold pt-10 pb-10 animate-fade-in">Próximos eventos</h1>
+
+		<section class="max-w-7xl mx-auto px-5 py-20">
+			<h1 class="text-center text-4xl font-semibold mb-12 animate-fade-in text-blue-950">Próximos eventos</h1>
+
+			<div class="flex flex-wrap justify-center gap-8">
+				
+				<EventCard
+					title="Simposio: Redes de Neurociencias"
+					image="https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+				/>
+
+			</div>
+		</section>
 
 		<!-- Sección Neurociencias -->
 		<h1 class="text-center text-4xl font-semibold pt-10 pb-5 animate-zoom-in timeline-view animate-range-[entry_20%_cover_25%]">Nuestra Red de Disciplinas</h1>
