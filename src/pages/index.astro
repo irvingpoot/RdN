@@ -36,12 +36,44 @@ const images = {
 
 <Layout title="RdN">
 	<main>
-		<div class="flex flex-col gap-5 text-gray-50 text-center py-40 bg-[url(/banner.webp)] bg-cover bg-blue-950 bg-blend-soft-light">
-			<p class="max-sm:text-2xl text-5xl animate-fade-in-up">Bienvenido a:</p>
-			<h1 class="max-sm:text-5xl text-8xl font-semibold text-shadow-black text-shadow-xs animate-fade-in-down">Redes de Neurociencias</h1>
-		</div>
+		<section class="relative h-[85vh] min-h-[600px] flex items-center justify-center bg-[url(/banner.webp)] bg-cover bg-center bg-blend-soft-light bg-blue-950 overflow-hidden isolate">
+			
+			<div class="absolute inset-0 bg-black/20 -z-10"></div>
 
-		<section class="w-full py-24 bg-slate-50 border-y border-gray-200">
+			<div class="relative z-10 flex flex-col items-center gap-6 px-4 text-center max-w-5xl mx-auto">
+				
+				<span class="text-blue-200 font-bold tracking-[0.2em] text-sm md:text-base uppercase animate-fade-in-down font-sans">
+					Excelencia en Educación y Salud
+				</span>
+
+				<h1 class="text-5xl md:text-7xl lg:text-8xl font-bold text-white drop-shadow-xl leading-tight animate-fade-in-up">
+					Redes de <br class="hidden sm:block" />
+					<span class="text-transparent bg-clip-text bg-linear-to-r from-blue-100 to-white">Neurociencias</span>
+				</h1>
+
+				<p class="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto animate-fade-in-up animate-delay-200 text-pretty font-sans">
+					Formación académica, investigación y divulgación científica para el desarrollo integral del sistema nervioso y la conducta.
+				</p>
+
+				<div class="flex flex-col sm:flex-row gap-4 mt-6 animate-fade-in-up animate-delay-300">
+					<a href="/cursos" class="px-8 py-3 bg-white text-blue-950 font-bold rounded-full hover:bg-blue-50 transition-all shadow-lg hover:shadow-xl hover:-translate-y-1">
+						Explorar Cursos
+					</a>
+					<a href="#sobreNosotros" class="px-8 py-3 border-2 border-white/30 text-white font-semibold rounded-full hover:bg-white/10 transition-all backdrop-blur-sm hover:border-white">
+						Conócenos
+					</a>
+				</div>
+			</div>
+			<div class="custom-shape-divider-bottom-1766950431">
+				<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+					<path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+				</svg>
+			</div>
+
+		</section>
+
+		<section class="w-full py-24">
+
 			<div class="max-w-7xl mx-auto px-5">
 				
 				<div class="text-center mb-16 animate-fade-in-down timeline-view animate-range-[entry_20%_cover_30%]">
@@ -60,7 +92,7 @@ const images = {
 						image="https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
 					/>
 
-					</div>
+				</div>
 
 				<div class="text-center mt-12">
 					<a href="/cursos" class="text-blue-950 font-semibold hover:text-blue-700 transition-colors border-b-2 border-transparent hover:border-blue-700 pb-1">
@@ -70,14 +102,23 @@ const images = {
 			</div>
 		</section>
 
-        <section id="sobreNosotros" class="relative py-24 bg-[url(/bannerNosotros.webp)] bg-cover bg-blue-950 bg-blend-soft-light overflow-hidden isolate">
-			<div class="absolute top-0 left-0 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-blue-600/30 rounded-full blur-[100px] -z-10"></div>
-			<div class="absolute bottom-0 right-0 translate-x-1/3 translate-y-1/3 w-[600px] h-[600px] bg-purple-900/20 rounded-full blur-[120px] -z-10"></div>
+        <section id="sobreNosotros" class="relative py-24 bg-[url(/bannerNosotros.webp)] bg-cover bg-blue-950 bg-blend-soft-light isolate min-h-screen flex items-center">
+
+			<div class="custom-shape-divider-top-1766950574">
+				<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+					<path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+				</svg>
+			</div>
+			<div class="custom-shape-divider-bottom-1766950431">
+				<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+					<path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+				</svg>
+			</div>
 
 			<div class="max-w-7xl mx-auto px-6 lg:px-8">
 				<div class="flex flex-col lg:flex-row items-center gap-16">
 					
-					<div class="w-full lg:w-1/2 animate-fade-in-up timeline-view animate-range-[entry_20%_cover_30%]">
+					<div class="w-full lg:w-1/2 animate-fade-in-right timeline-view animate-range-[entry_20%_cover_40%]">
 						<h2 class="text-lg font-bold text-blue-300 tracking-wider uppercase mb-2">Nuestra Esencia</h2>
 						<h3 class="text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
 							Ciencia, Ética y <br/>
@@ -89,7 +130,7 @@ const images = {
 						</p>
 
 						<a href="/nosotros" class="inline-flex items-center gap-3 bg-white/10 hover:bg-white/20 border border-white/20 text-white px-8 py-4 rounded-full backdrop-blur-sm transition-all duration-300 group">
-							<span>Descubre nuestra misión</span>
+							<span>Descubre más sobre nosotros</span>
 							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 group-hover:translate-x-1 transition-transform">
 								<path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
 							</svg>
@@ -98,7 +139,7 @@ const images = {
 
 					<div class="w-full lg:w-1/2 relative animate-fade-in-left timeline-view animate-range-[entry_20%_cover_30%]">
 						<div class="grid grid-cols-2 gap-4">
-							<div class="row-span-2 relative rounded-2xl overflow-hidden shadow-2xl border border-white/10 group">
+							<div class="row-span-2 relative rounded-2xl overflow-hidden shadow-2xl border border-white/10 group animate-pop timeline-view animate-range-[entry_30%_cover_40%] animate-delay-100">
 								<div class="absolute inset-0 bg-linear-to-t from-blue-950/80 to-transparent z-10"></div>
 								<img 
 									src="/misionvision.webp" 
@@ -110,7 +151,7 @@ const images = {
 								</div>
 							</div>
 
-							<div class="relative rounded-2xl overflow-hidden shadow-lg border border-white/10 group h-48">
+							<div class="relative rounded-2xl overflow-hidden shadow-lg border border-white/10 group h-48 animate-pop timeline-view animate-range-[entry_30%_cover_40%] animate-delay-150">
 								<img 
 									src="https://images.unsplash.com/photo-1559757175-5700dde675bc?auto=format&fit=crop&q=80&w=800" 
 									alt="Trabajo en equipo" 
@@ -118,7 +159,7 @@ const images = {
 								/>
 							</div>
 
-							<div class="bg-blue-900/50 backdrop-blur-md p-6 rounded-2xl border border-white/10 flex flex-col justify-center items-start">
+							<div class="bg-blue-900/50 backdrop-blur-md p-6 rounded-2xl border border-white/10 flex flex-col justify-center items-start animate-pop timeline-view animate-range-[entry_30%_cover_40%] animate-delay-200">
 								<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10 text-blue-300 mb-3">
 									<path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 5.472m0 0a9.09 9.09 0 00-3.279 3.298m.091-7.663c1.838.22 4.07.95 6.268 2.388.95-.975 2.24-2.268 3.011-4.05m-7.25-1.125L12 3.375l2.25 5.25m-4.5 0L12 11.625l2.25-2.999M12 11.625v2.25" />
 								</svg>
@@ -127,7 +168,6 @@ const images = {
 							</div>
 						</div>
 					</div>
-
 				</div>
 			</div>
 		</section>
@@ -151,32 +191,76 @@ const images = {
                         </div>
                     </div>
                     
-                    <CollageCard title="Neurología" icon={icons.cerebro} image={images.neuro} class="md:row-span-2" />
+                    <CollageCard title="Neurología" icon={icons.cerebro} image={images.neuro} class="md:row-span-2 animate-slide-up-fade timeline-view animate-range-[entry_30%_cover_40%]" />
 
-                    <CollageCard title="Psiquiatría" icon={icons.mente} image={images.psiqui} />
+                    <CollageCard title="Psiquiatría" icon={icons.mente} image={images.psiqui} class="animate-slide-up-fade timeline-view animate-range-[entry_30%_cover_40%]" />
 
-                    <CollageCard title="Neuroimagen" icon={icons.ojo} image={images.neuroimg} />
+                    <CollageCard title="Neuroimagen" icon={icons.ojo} image={images.neuroimg} class="animate-slide-up-fade timeline-view animate-range-[entry_30%_cover_40%]" />
 
-                    <CollageCard title="Genética" icon={icons.adn} image={images.genetica} />
+                    <CollageCard title="Genética" icon={icons.adn} image={images.genetica} class="animate-slide-up-fade timeline-view animate-range-[entry_30%_cover_40%]" />
 
-                    <CollageCard title="Ingeniería Biomédica" icon={icons.chip} image={images.ing} class="md:col-span-2" />
+                    <CollageCard title="Ingeniería Biomédica" icon={icons.chip} image={images.ing} class="md:col-span-2 animate-slide-up-fade timeline-view animate-range-[entry_30%_cover_40%]" />
 
-                    <CollageCard title="Neuropsicología" icon={icons.puzzle} image={images.neuropsi} />
+                    <CollageCard title="Neuropsicología" icon={icons.puzzle} image={images.neuropsi} class="animate-slide-up-fade timeline-view animate-range-[entry_30%_cover_40%]"/>
                     
-                    <CollageCard title="Rehabilitación" icon={icons.rehab} image={images.rehab} />
+                    <CollageCard title="Rehabilitación" icon={icons.rehab} image={images.rehab} class="animate-slide-up-fade timeline-view animate-range-[entry_30%_cover_20%]"/>
 
-                    <CollageCard title="Matemáticas" icon={icons.mate} image={images.mate} />
+                    <CollageCard title="Matemáticas" icon={icons.mate} image={images.mate} class="animate-slide-up-fade timeline-view animate-range-[entry_30%_cover_20%]"/>
+                    <CollageCard title="Paido-psiquiatría" icon={icons.nino} image={images.paido} class="md:col-span-2 animate-slide-up-fade timeline-view animate-range-[entry_30%_cover_20%]" />
 
-                    <CollageCard title="Paido-psiquiatría" icon={icons.nino} image={images.paido} class="md:col-span-2" />
-
-                    <CollageCard title="Psicología" icon={icons.psi} image={images.psi} class="md:col-span-2"/>
-
-                    <CollageCard title="Bioquímica" icon={icons.bio} image={images.bio} />
-
-                    <CollageCard title="Neuropediatría" icon={icons.ped} image={images.ped} />
+                    <CollageCard title="Psicología" icon={icons.psi} image={images.psi} class="md:col-span-2 animate-slide-up-fade timeline-view animate-range-[entry_10%_cover_10%]"/>
+                    <CollageCard title="Bioquímica" icon={icons.bio} image={images.bio} class="animate-slide-up-fade timeline-view animate-range-[entry_10%_cover_10%]" />
+                    <CollageCard title="Neuropediatría" icon={icons.ped} image={images.ped} class="animate-slide-up-fade timeline-view animate-range-[entry_10%_cover_10%]"/>
 
 				</div>
 			</div>
 		</section>
 	</main>
+
+
 </Layout>
+
+<style>
+	.custom-shape-divider-top-1766950574 {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		overflow: hidden;
+		line-height: 0;
+		transform: rotate(180deg);
+	}
+
+	.custom-shape-divider-top-1766950574 svg {
+		position: relative;
+		display: block;
+		width: calc(100% + 1.3px);
+		height: 150px;
+	}
+
+	.custom-shape-divider-top-1766950574 .shape-fill {
+		fill: #F8FAFC;
+	}
+
+	.custom-shape-divider-bottom-1766950431 {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		overflow: hidden;
+		line-height: 0;
+		transform: rotate(180deg);
+	}
+
+	.custom-shape-divider-bottom-1766950431 svg {
+		position: relative;
+		display: block;
+		width: calc(100% + 1.3px);
+		height: 150px;
+	}
+
+	.custom-shape-divider-bottom-1766950431 .shape-fill {
+		fill: #F8FAFC;
+	}
+
+</style>
