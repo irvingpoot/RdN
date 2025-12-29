@@ -9,7 +9,7 @@ export const courses = [
         totalLessons: 24,
         duration: "4 Semanas",
         minLevel: "Licenciatura",
-        image: "/cursos/neuroanatomia-funcional.webp",
+        image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=600&q=80",
         
         // --- NUEVOS DATOS EXTRA ---
         language: "Español",
@@ -40,7 +40,7 @@ export const courses = [
         totalLessons: 18,
         duration: "6 Horas",
         minLevel: "Grado",
-        image: "/cursos/neuroplasticidad-clinica.webp",
+        image: "https://images.unsplash.com/photo-1620121692029-d088224ddc74?auto=format&fit=crop&w=600&q=80",
         
         // --- NUEVOS DATOS EXTRA ---
         language: "Español",
@@ -70,7 +70,7 @@ export const courses = [
         totalLessons: 24,
         duration: "10 Horas",
         minLevel: "Postgrado",
-        image: "/cursos/neuroimagen-interpretacion.webp",
+        image: "https://images.unsplash.com/photo-1559757175-5700dde675bc?auto=format&fit=crop&w=600&q=80",
         
         // --- NUEVOS DATOS EXTRA ---
         language: "Español / Inglés",
@@ -100,7 +100,7 @@ export const courses = [
         totalLessons: 12,
         duration: "4 Horas",
         minLevel: "Estudiante",
-        image: "/cursos/neurobiologicas.webp",
+        image: "https://images.unsplash.com/photo-1530973428-5bf2db2e4d71?auto=format&fit=crop&w=600&q=80",
         
         // --- NUEVOS DATOS EXTRA ---
         language: "Español",
