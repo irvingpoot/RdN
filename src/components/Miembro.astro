@@ -1,12 +1,58 @@
 ---
-    const { nombre, imagen, bio, class: extraClasses } = Astro.props;
+const { nombre, imagen, bio, membresia = "Miembro Activo", class: extraClasses } = Astro.props;
+
+const getBadgeColor = (tipo: string) => {
+    const t = tipo.toLowerCase();
+    if (t.includes('fundador')) return 'bg-yellow-100 text-yellow-800 border-yellow-200';
+    if (t.includes('honorario')) return 'bg-purple-100 text-purple-800 border-purple-200';
+    if (t.includes('formación') || t.includes('estudiante')) return 'bg-green-100 text-green-800 border-green-200';
+    return 'bg-blue-100 text-blue-800 border-blue-200'; 
+};
+
+const badgeColor = getBadgeColor(membresia);
 ---
-<div class:list={["lg:flex lg:gap-5",extraClasses]}>
-    <aside>
-        <img src={imagen} alt={nombre} class="max-sm:float-left max-sm:w-48 max-sm:mr-4 max-sm:mb-2 lg:w-7xl rounded-lg">
-    </aside>
-    <div class="max-w-fit">
-        <h1 class="text-2xl font-semibold pb-2">{nombre}</h1>
-        <p class="text-justify pr-5">{bio}</p>
+
+<article class:list={["group relative pt-16 h-full w-full max-w-sm", extraClasses]}>
+    <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 p-6 pt-24 border border-gray-100 relative h-full flex flex-col items-center text-center">
+        
+        <div class="absolute top-0 left-0 w-full h-28 bg-blue-950 rounded-t-2xl z-0 border-b border-blue-100"></div>
+
+        <div class="absolute -top-16 left-1/2 -translate-x-1/2 z-10">
+            <div class="w-42 h-42 rounded-full p-1 bg-white shadow-lg group-hover:animate-pulsing transition-transform duration-300">
+                <img 
+                    src={imagen} 
+                    alt={nombre} 
+                    class="w-full h-full rounded-full object-cover border-4 border-blue-950"
+                    loading="lazy"
+                />
+            </div>
+        </div>
+
+        <div class="relative z-10 w-full flex-1 flex flex-col items-center">
+            
+            <span class:list={[
+                "px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider border shadow-sm mb-3",
+                badgeColor
+            ]}>
+                {membresia}
+            </span>
+
+            <h3 class="text-xl font-bold text-blue-950 mb-2 group-hover:text-blue-700 transition-colors">
+                {nombre}
+            </h3>
+            
+            <hr class="w-16 border-t-2 border-blue-100 mx-auto mb-4" />
+
+            <p class="text-gray-600 text-sm leading-relaxed text-pretty mb-6">
+                {bio}
+            </p>
+
+            <div class="mt-auto pt-4 border-t border-gray-50 w-full">
+                <button class="text-xs font-bold text-blue-950 hover:text-blue-800 uppercase tracking-wider py-2 flex items-center justify-center gap-2 w-full group/btn">
+                    Ver Perfil Completo
+                    <span class="transform group-hover/btn:translate-x-1 transition-transform">&rarr;</span>
+                </button>
+            </div>
+        </div>
     </div>
-</div>
+</article>

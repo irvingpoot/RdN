@@ -16,7 +16,7 @@ const { title } = Astro.props;
 		<title>{title}</title>
 		<ClientRouter />
 	</head>
-	<body class="font-PlayfairDisplay text-blue-950 bg-gray-50 m-0 p-0">
+	<body class="font-PlayfairDisplay text-blue-950 bg-slate-50 m-0 p-0">
 		<Header />
 		<slot />
 		<Footer />
@@ -29,7 +29,7 @@ const { title } = Astro.props;
 				// Si el botón no existe, no hagas nada
 				if (!menuBtn) return;
 
-				// Revisa si ya hemos añadido el oyente
+				// Revisa si ya está añadido el oyente
 				if (menuBtn.dataset.listenerAdded === 'true') {
 					return; // Ya está listo, no añadas otro
 				}
